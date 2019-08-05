@@ -44,12 +44,56 @@
 					<div class="container bannerSlideHolder bannerSlideHolder02 position-relative">
 					</div>
 					<!-- bannerBlockSlideBg -->
-					<span class="bgCover bannerBlockSlideBg d-block position-absolute" style="background-image: url('images/newBanner.jpg');">
-						<img class="sr-only" src="images/newBanner.jpg" alt="image description">
+					<span class="bgCover bannerBlockSlideBg d-block position-absolute">
+						<img class="sr-only" alt="image description">
 					</span>
 				</div>
 			</section>
 
+			<script type="text/javascript">
+				window.onload = function()
+				{
+					var viewPortArr = getViewport();
+					var ele = document.getElementById("bannerImage");
+					var childEle = ele.children[0];
+					if(viewPortArr[0] > viewPortArr[1])
+					{
+						ele.style.backgroundImage = "url('images/banner1.jpg')";
+						childEle.src = "Images/banner1.jpg";
+					}
+					else
+					{
+						ele.style.backgroundImage = "url('images/banner2.jpg')";
+						childEle.src = "Images/banner2.jpg";
+					}
+
+				}
+
+				function getViewport() {
+
+				 var viewPortWidth;
+				 var viewPortHeight;
+
+				 if (typeof window.innerWidth != 'undefined') {
+				   viewPortWidth = window.innerWidth,
+				   viewPortHeight = window.innerHeight
+				 }
+
+				 else if (typeof document.documentElement != 'undefined'
+				 && typeof document.documentElement.clientWidth !=
+				 'undefined' && document.documentElement.clientWidth != 0) {
+				    viewPortWidth = document.documentElement.clientWidth,
+				    viewPortHeight = document.documentElement.clientHeight
+				 }
+
+				 else {
+				   viewPortWidth = document.getElementsByTagName('body')[0].clientWidth,
+				   viewPortHeight = document.getElementsByTagName('body')[0].clientHeight
+				 }
+				 return [viewPortWidth, viewPortHeight];
+				}
+
+			</script>
 
 
 			<!-- wcuBlock -->
