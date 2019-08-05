@@ -35,6 +35,52 @@
 
 	<!-- pageWrapper -->
 	<div id="pageWrapper">
+		<!-- pageHeader -->
+		<header id="pageHeader" class="pageHeader02">
+			<div class="container relativeSm">
+				<!-- pageHeaderTopBar -->
+				<div class="pageHeaderTopBar">
+					<div class="row">
+						<div class="col-3 col-lg-6">
+							<!-- topBarContactList -->
+							<ul class="list-unstyled topBarContactList topBarContactList02 align-items-center mb-0 d-none d-md-flex">
+								<li>
+									<a href="tel:&#049;&#050;&#051;&#052;&#053;&#054;&#055;&#056;&#057;&#049;&#048;">
+										<i class="fas fa-phone fa-flip-horizontal icn"><span class="sr-only">icon</span></i>
+										<span class="d-none d-lg-inline">+91 866-085-6757</span>
+									</a>
+								</li>
+								<li>
+									<a href="mailto:&#073;&#110;&#102;&#111;&#046;&#100;&#101;&#101;&#114;&#099;&#114;&#101;&#097;&#116;&#105;&#118;&#101;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;">
+										<i class="fas fa-envelope icn"><span class="sr-only">icon</span></i>
+										<span class="d-none d-lg-inline">navrang20@hotmail.com</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="col-9 col-lg-6 d-flex justify-content-end position-static">	
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="headerFixer">
+				<div class="container relativeSm" style="background-color: #b84ac5">
+					<!-- pageHeaderHolder -->
+					<div class="pageHeaderHolder pageHeaderHolder02 rounded text-white clearfix relativeSm relativeMd" " style="background-color: transparent;">
+						<!-- logo -->
+						<div class="logo alignleft">
+							<a href="home.html">
+								<img src="images/siteLogo.png" alt="NAVRANG">
+							</a>
+						</div>
+						<!-- pageNavHolder -->
+						<div class="pageNavHolder alignright d-flex justify-content-end align-items-md-start" style="height: 70px !important;">
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		
 		<main>
 			<!-- bannerSliderBlock -->
 			<section class="bannerSliderBlock bsbOffsetTop bannerSliderBlock02 bannerSlider w-100 slickSlider text-center text-white">
@@ -63,6 +109,7 @@
 					}
 					else
 					{
+						var pageHeader = document.getElementById("pageHeader").hidden=true;				   
 						ele.style.backgroundImage = "url('images/banner2.jpg')";
 						childEle.src = "images/banner2.jpg";
 					}
